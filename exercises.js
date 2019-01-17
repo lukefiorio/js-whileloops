@@ -68,11 +68,15 @@ while (i<tvShows.length) {
 
 */
 
+num = 3;
 var i=1;
 while (i<10) {
-	console.log(i+" x 3 = "+3*i);
+	console.log(i+" x "+num+" = "+num*i);
 	i++;
 }
+
+
+
 
 
 
@@ -104,6 +108,20 @@ devleague homie!
 ...*/
 
 
+var i=1;
+while (i<=100) {
+	if (i%3===0 && i%5===0) {
+		console.log("devleague homie!");
+	} else if (i%3 >0 && i%5===0) {
+		console.log("league");
+	} else if (i%3 ===0 && i%5>0) {
+		console.log("dev");
+	} else {
+		console.log(i);
+	}
+	i++
+}
+
 /*
  * #6
  * Function - buyDonut
@@ -115,6 +133,16 @@ devleague homie!
  *Pass in a number value to invoke your function. Console.log donutBought.
 */ 
 
+var donutPrice = 5;
+var donutBought = 0;
+function buyDonut(budget) {
+	while (budget>=donutPrice) {
+		donutBought ++;
+		budget -=donutPrice
+	}
+	return donutBought;
+}
 
+console.log(buyDonut(5));
 
 
